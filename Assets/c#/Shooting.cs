@@ -76,7 +76,7 @@ public class Shooting : MonoBehaviour
         GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity); // 在攻擊點上面產生一個子彈
         currentBullet.transform.forward = shootingDirection.normalized; // 將子彈飛行方向與射線方向一致
 
-        currentBullet.GetComponent<Rigidbody>().AddForce(currentBullet.transform.forward * 30, ForceMode.Impulse); // 依據飛行方向推送子彈
+        currentBullet.GetComponent<Rigidbody>().AddForce(currentBullet.transform.forward * 80, ForceMode.Impulse); // 依據飛行方向推送子彈
         //currentBullet.GetComponent<Rigidbody>().AddForce(PlayerCamera.transform.up * , ForceMode.Impulse);
 
         bulletsLeft--;    // 將彈夾中的子彈減一，以下的寫法都是一樣的意思
